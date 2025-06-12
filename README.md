@@ -13,3 +13,7 @@ laravel new <name> --react --pest
 ```
 
 This starter repo is specific to that stack, but it may have conventions that benefit any Laravel application.
+
+## Cursor / VS Code
+
+I currently use [Cursor](https://www.cursor.com/) as my IDE. The repository contains my preferred settings and extensions within the `.vscode` folder.
