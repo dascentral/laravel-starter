@@ -1,0 +1,30 @@
+{
+  "recommendations": [
+    // PHP Development
+    "calebporzio.better-phpunit",
+    "bmewburn.vscode-intelephense-client",
+    "mehedidracula.php-namespace-resolver",
+    // Laravel Development
+    "laravel.vscode-laravel",
+    "open-southeners.laravel-pint",
+    // Web Development
+    "christian-kohler.path-intellisense",
+    "redhat.vscode-yaml",
+    "yzhang.markdown-all-in-one",
+    // Language / File / Framework Support
+    "bradlc.vscode-tailwindcss",
+    "IronGeek.vscode-env",
+    "unifiedjs.vscode-mdx",
+    // Code Quality
+    "davidanson.vscode-markdownlint",
+    "dbaeumer.vscode-eslint",
+    "esbenp.prettier-vscode",
+    // Utility
+    "mikestead.dotenv",
+    "editorconfig.editorconfig",
+    "github.vscode-github-actions",
+    "lucax88x.codeacejumper",
+    "patbenatar.advanced-new-file",
+    "sleistner.vscode-fileutils",
+  ]
+}
