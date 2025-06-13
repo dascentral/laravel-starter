@@ -34,7 +34,7 @@ curl -o .vscode/settings.json https://raw.githubusercontent.com/dascentral/larav
 
 A new Laravel application comes with [Prettier](https://prettier.io), [ESLint](https://eslint.org/), and [Laravel Pint](https://laravel.com/docs/12.x/pint) to maximize code quality by analyzing your code to detect issues.
 
-This repository contains my preferred configuration files for each tool. You can download these files into your repository via the following command:
+This repository contains my preferred configuration files for each tool. You can download these files into your repository via the following commands:
 
 ```bash
 # .prettierrc
