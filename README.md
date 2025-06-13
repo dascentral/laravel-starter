@@ -28,11 +28,11 @@ This repository contains my preferred configuration files for each tool. You can
 
 ```bash
 # .prettierrc
-curl -o pint.json https://raw.githubusercontent.com/dascentral/laravel-starter/main/.prettierrc
+curl -o pint.json https://raw.githubusercontent.com/dascentral/laravel-starter/refs/heads/main/.prettierrc
 
 # esling.config.js
-curl -o pint.json https://raw.githubusercontent.com/dascentral/laravel-starter/main/esling.config.js
+curl -o pint.json https://raw.githubusercontent.com/dascentral/laravel-starter/refs/heads/main/eslint.config.js
 
 # pint.json
-curl -o pint.json https://raw.githubusercontent.com/dascentral/laravel-starter/main/pint.json
+curl -o pint.json https://raw.githubusercontent.com/dascentral/laravel-starter/refs/heads/main/pint.json
 ```
