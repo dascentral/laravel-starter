@@ -6,7 +6,7 @@ Rather than having a template repository for new Laravel Projects, I’m going a
 
 This repository customizes a new [Laravel 12](https://laravel.com/docs/12.x) application. Instructions are accurate as of June 2025.
 
-## Starter Kit
+## Create New Application
 
 In 2024, the Laravel Team launched [starter kits](https://laravel.com/starter-kits) that enable you to get a new Laravel application up and running real fast with the stack of your choice. I go with an Inertia.js + React + Pest stack.
 
