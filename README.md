@@ -202,7 +202,7 @@ QUEUE_CONNECTION="redis"
 
 ### Session
 
-You guessed it... I also use Redis for the Session driver.
+I Redis for the Session driver across all environments.
 
 ```
 SESSION_DRIVER="redis"
