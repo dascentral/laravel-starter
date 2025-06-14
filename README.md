@@ -120,6 +120,42 @@ Ensure you have a valid `auth.json` configured for installation and then add `la
 composer require laravel/nova
 ```
 
+## User Model
+
+I have a few preferences that require modifications to the `User` model that comes out-of-the-box with a new Laravel application.
+
+### First and Last
+
+The default `User` model in Laravel comes with a single `name` field. I prefer to split that into `first` and `last` fields. I have updated the `USERS` table migration, `User` model, `UserFactory`, and `DatabaseSeeder` accordingly.
+
+### Timestamps
+
+By default, Laravel expects `created_at` and `updated_at` columns to exist on a model's corresponding database table. I prefer to use `last_updated` and `date_created` field names for a model's timestamps.
+
+I have updated the `users` table and `User` model accordingly.
+
+### Guarded vs. Fillable
+
+I prefer to use the `$guarded` model attribute as opposed to `$fillable` to manage [mass assignment protection](https://laravel.com/docs/12.x/eloquent#mass-assignment). As a result, I have updated the `User` model accordingly.
+
+```php
+    protected $guarded = [
+        'id',
+        'date_created',
+        'last_updated',
+    ];
+```
+
+### File Download
+
+Execute the following commands to download these customizations into your project.
 
 ```bash
+curl -o app/Models/User.php https://raw.githubusercontent.com/dascentral/laravel-starter/refs/heads/main/app/Models/User.php
+
+curl -o database/factories/UserFactory.php https://raw.githubusercontent.com/dascentral/laravel-starter/refs/heads/main/database/factories/UserFactory.php
+
+curl -o database/migrations/0001_01_01_000000_create_users_table.php https://raw.githubusercontent.com/dascentral/laravel-starter/refs/heads/main/database/migrations/0001_01_01_000000_create_users_table.php
+
+curl -o database/seeders/DatabaseSeeder.php https://raw.githubusercontent.com/dascentral/laravel-starter/refs/heads/main/database/seeders/DatabaseSeeder.php
 ```
