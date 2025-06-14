@@ -114,16 +114,12 @@ Since Nova is a paid package, installation is a little more in depth than a simp
 composer config repositories.nova '{"type": "composer", "url": "https://nova.laravel.com"}' --file composer.json
 ```
 
-Next, add `laravel/nova` to your list of required packages in your composer.json file:
-
-```json
-"require": {
-    "laravel/nova": "^5.0"
-},
-```
-
-Ensure you have a valid `auth.json` configured for installation and then run a `composer update`.
+Ensure you have a valid `auth.json` configured for installation and then add `laravel/nova` to your list of required packages in your `composer.json` file:
 
 ```bash
-composer update --prefer-dist
+composer require laravel/nova
+```
+
+
+```bash
 ```
