@@ -159,3 +159,51 @@ curl -o database/migrations/0001_01_01_000000_create_users_table.php https://raw
 
 curl -o database/seeders/DatabaseSeeder.php https://raw.githubusercontent.com/dascentral/laravel-starter/refs/heads/main/database/seeders/DatabaseSeeder.php
 ```
+
+## Application Configuration
+
+I try real hard to embrace the framework defaults. However, I do make a few modifications.
+
+### App
+
+I give the application a custom `APP_NAME` and `APP_URL` since those values will be unique per project.
+
+### Cache
+
+I run Redis across all environments and configure the `CACHE_STORE` accordingly.
+
+```
+CACHE_STORE="redis"
+```
+
+### Database
+
+I also run MySQL across all environments and configure the `DB_CONNECTION` accordingly.
+
+```
+DB_CONNECTION="mysql"
+```
+
+### Queue
+
+I prefer the `sync` queue connection in my local development environment so that I do not have to worry about running any queue workers.
+
+```
+# local development
+QUEUE_CONNECTION="sync"
+```
+
+In production, I leverage Redis and [Laravel Horizon](https://laravel.com/docs/12.x/horizon).
+
+```
+# production
+QUEUE_CONNECTION="redis"
+```
+
+### Session
+
+You guessed it... I also use Redis for the Session driver.
+
+```
+SESSION_DRIVER="redis"
+```
