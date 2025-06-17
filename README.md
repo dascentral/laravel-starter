@@ -6,6 +6,10 @@ Rather than having a template repository for new Laravel Projects, I’m going a
 
 This repository customizes a new [Laravel 12](https://laravel.com/docs/12.x) application. Instructions are accurate as of June 2025.
 
+### References
+
+* [Essentials](https://laravel-news.com/laravel-essentials) &mdash; Essentials is a package created by Nuno Maduro that provides better defaults for your Laravel applications.
+
 ## Create New Application
 
 In 2024, the Laravel Team launched [starter kits](https://laravel.com/starter-kits) that enable you to get a new Laravel application up and running real fast with the stack of your choice. I go with an Inertia.js + React + Pest stack.
@@ -188,14 +192,14 @@ DB_CONNECTION="mysql"
 
 I prefer the `sync` queue connection in my local development environment so that I do not have to worry about running any queue workers.
 
-```
+```env
 # local development
 QUEUE_CONNECTION="sync"
 ```
 
 In production, I leverage Redis and [Laravel Horizon](https://laravel.com/docs/12.x/horizon).
 
-```
+```env
 # production
 QUEUE_CONNECTION="redis"
 ```
@@ -204,6 +208,6 @@ QUEUE_CONNECTION="redis"
 
 I Redis for the Session driver across all environments.
 
-```
+```env
 SESSION_DRIVER="redis"
 ```
