@@ -176,7 +176,7 @@ I give the application a custom `APP_NAME` and `APP_URL` since those values will
 
 I run Redis across all environments and configure the `CACHE_STORE` accordingly.
 
-```
+```env
 CACHE_STORE="redis"
 ```
 
