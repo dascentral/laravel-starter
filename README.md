@@ -168,11 +168,11 @@ curl -o database/seeders/DatabaseSeeder.php https://raw.githubusercontent.com/da
 
 I try real hard to embrace the framework defaults. However, I do make a few modifications.
 
-### App
+### App Config
 
 I give the application a custom `APP_NAME` and `APP_URL` since those values will be unique per project.
 
-### Cache
+### Cache Config
 
 I run Redis across all environments and configure the `CACHE_STORE` accordingly.
 
@@ -180,15 +180,15 @@ I run Redis across all environments and configure the `CACHE_STORE` accordingly.
 CACHE_STORE="redis"
 ```
 
-### Database
+### Database Config
 
 I also run MySQL across all environments and configure the `DB_CONNECTION` accordingly.
 
-```
+```env
 DB_CONNECTION="mysql"
 ```
 
-### Queue
+### Queue Config
 
 I prefer the `sync` queue connection in my local development environment so that I do not have to worry about running any queue workers.
 
