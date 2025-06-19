@@ -71,9 +71,9 @@ curl -o phpstan.neon https://raw.githubusercontent.com/dascentral/laravel-starte
 
 I always install the following first-party packages:
 
-- [Laravel Horizon](https://laravel.com/docs/12.x/horizon)
-- [Laravel Pulse](https://laravel.com/docs/12.x/pulse)
-- [Laravel Telescope](https://laravel.com/docs/12.x/telescope)
+* [Laravel Horizon](https://laravel.com/docs/12.x/horizon)
+* [Laravel Pulse](https://laravel.com/docs/12.x/pulse)
+* [Laravel Telescope](https://laravel.com/docs/12.x/telescope)
 
 ```bash
 # Laravel Horizon
@@ -95,12 +95,12 @@ php artisan migrate
 
 I always install the following third-party packages:
 
-- [spatie/laravel-backup](https://spatie.be/docs/laravel-backup/v9/introduction)
-- [spatie/laravel-data](https://spatie.be/docs/laravel-data/v4/introduction)
-- [spatie/laravel-ray](https://myray.app/docs/php/laravel/installation)
-- [spatie/laravel-view-models](https://github.com/spatie/laravel-view-models)
-- [predis/predis](https://github.com/predis/predis)
-- [pestphp/pest-plugin-faker](https://pestphp.com/docs/plugins#content-faker)
+* [spatie/laravel-backup](https://spatie.be/docs/laravel-backup/v9/introduction)
+* [spatie/laravel-data](https://spatie.be/docs/laravel-data/v4/introduction)
+* [spatie/laravel-ray](https://myray.app/docs/php/laravel/installation)
+* [spatie/laravel-view-models](https://github.com/spatie/laravel-view-models)
+* [predis/predis](https://github.com/predis/predis)
+* [pestphp/pest-plugin-faker](https://pestphp.com/docs/plugins#content-faker)
 
 ```bash
 composer require spatie/laravel-backup spatie/laravel-data spatie/laravel-ray spatie/laravel-view-models predis/predis
