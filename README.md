@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Rather than having a template repository for new Laravel Projects, I’m going after a step-by-step script that outlines the changes that I typically make and why. I feel this approach will be easier to maintain and will provide more value to guests.
+Rather than having a template repository for new Laravel Projects, I'm going after a step-by-step script that outlines the changes that I typically make and why. I feel this approach will be easier to maintain and will provide more value to guests.
 
 This repository customizes a new [Laravel 12](https://laravel.com/docs/12.x) application. Instructions are accurate as of June 2025.
 
