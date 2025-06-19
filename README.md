@@ -204,7 +204,7 @@ In production, I leverage Redis and [Laravel Horizon](https://laravel.com/docs/1
 QUEUE_CONNECTION="redis"
 ```
 
-### Session
+### Session Config
 
 I Redis for the Session driver across all environments.
 
