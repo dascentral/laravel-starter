@@ -216,29 +216,8 @@ SESSION_DRIVER="redis"
 
 ### Migrations
 
-Since I use Redis for Larevel's cache and session features, I make a couple of modifications to the default migrations.
-
-I completely remove the migration for the `cache` table.
+Since I use Redis for Larevel's cache feature, I can remove the migration for the `cache` table.
 
 ```bash
 rm database/migrations/0001_01_01_000001_create_cache_table.php
-```
-
-The `create_users_table` migration creates a `sessions` table. I remove that table from the `up()` method:
-
-```php
-Schema::create('sessions', function (Blueprint $table) {
-    $table->string('id')->primary();
-    $table->foreignId('user_id')->nullable()->index();
-    $table->string('ip_address', 45)->nullable();
-    $table->text('user_agent')->nullable();
-    $table->longText('payload');
-    $table->integer('last_activity')->index();
-});
-```
-
-And I remove the `dropIfExists()` call from the `down()` method:
-
-```php
-Schema::dropIfExists('sessions');
 ```
