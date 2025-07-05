@@ -36,11 +36,14 @@ curl -o .vscode/settings.json https://raw.githubusercontent.com/dascentral/larav
 
 ## Code Quality
 
-A new Laravel application comes with [Prettier](https://prettier.io), [ESLint](https://eslint.org/), and [Laravel Pint](https://laravel.com/docs/12.x/pint) to maximize code quality by analyzing your code to detect issues.
+A new Laravel application comes with [Prettier](https://prettier.io), [ESLint](https://eslint.org/), and [Laravel Pint](https://laravel.com/docs/12.x/pint) to maximize code quality by analyzing your code to detect issues. It also contains a set of settings for [EditorConfig](https://editorconfig.org).
 
 This repository contains my preferred configuration files for each tool. You can download these files into your repository via the following commands:
 
 ```bash
+# .editorconfig
+curl -o .editorconfig https://raw.githubusercontent.com/dascentral/laravel-starter/refs/heads/main/.editorconfig
+
 # .prettierrc
 curl -o .prettierrc https://raw.githubusercontent.com/dascentral/laravel-starter/refs/heads/main/.prettierrc
 
