@@ -142,13 +142,13 @@ composer require --dev pestphp/pest-plugin-faker
 
 [Laravel Nova](https://nova.laravel.com) is the simplest and fastest way to build production-ready administration panels using Laravel.
 
-Since Nova is a paid package, installation is a little more in depth than a simple `composer require` command. First, add the repository to your `composer.json`:
+Since Nova is a paid package, installation is a little more in-depth than a simple `composer require` command. First, add the repository to your `composer.json`:
 
 ```bash
 composer config repositories.nova '{"type": "composer", "url": "https://nova.laravel.com"}' --file composer.json
 ```
 
-Ensure you have a valid `auth.json` configured for installation and then add `laravel/nova` to your list of required packages in your `composer.json` file:
+Ensure you have a valid `auth.json` configured for installation, and then add `laravel/nova` to your list of required packages in your `composer.json` file:
 
 ```bash
 composer require laravel/nova
