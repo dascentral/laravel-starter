@@ -6,7 +6,7 @@ Rather than having a template repository for new Laravel Projects, I'm going aft
 
 This repository customizes a new [Laravel 12](https://laravel.com/docs/12.x) application. Instructions are accurate as of June 2025.
 
-### References
+### Resources
 
 * [Essentials](https://laravel-news.com/laravel-essentials) &mdash; Essentials is a package created by Nuno Maduro that provides better defaults for your Laravel applications.
 
