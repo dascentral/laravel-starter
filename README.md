@@ -20,11 +20,11 @@ laravel new --react --pest <name>
 
 This starter repo is specific to that stack, but it may have conventions that benefit any Laravel application.
 
-## Cursor / VS Code
+## IDE Configuration
 
-I currently use [Cursor](https://www.cursor.com/) as my IDE. The repository contains my preferred settings and extensions within the `.vscode` folder.
+I currently use [Cursor](https://www.cursor.com/) as my IDE. This repository contains a `.vscode` folder that contains my preferred settings and extensions.
 
-To replicate this set up within your project:
+To replicate this setup within your project:
 
 ```bash
 mkdir -p .vscode
