@@ -4,7 +4,11 @@
 
 Rather than having a template repository for new Laravel Projects, I'm going after a step-by-step script that outlines the changes that I typically make and why. I feel this approach will be easier to maintain and will provide more value to guests.
 
-This repository customizes a new [Laravel 12](https://laravel.com/docs/12.x) application. Instructions are accurate as of June 2025.
+And let's be honest... we're replacing this repo with AI instructions before much longer, right?
+
+### Context
+
+This repository customizes a new [Laravel 12](https://laravel.com/docs/12.x) application. Instructions are accurate as of October 2025.
 
 ### Resources
 
@@ -12,7 +16,7 @@ This repository customizes a new [Laravel 12](https://laravel.com/docs/12.x) app
 
 ## Create New Application
 
-In 2024, the Laravel Team launched [starter kits](https://laravel.com/starter-kits) that enable you to get a new Laravel application up and running real fast with the stack of your choice. I go with an Inertia.js + React + Pest stack.
+In 2024, the Laravel Team launched [starter kits](https://laravel.com/starter-kits) that enable you to get a new Laravel application up and running quickly with the stack of your choice. I prefer the Inertia.js + React + Pest stack.
 
 ```bash
 laravel new --react --pest <name>
