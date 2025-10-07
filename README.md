@@ -140,6 +140,8 @@ I have a few preferences that require modifications to the `User` model that com
 
 The default `User` model in Laravel comes with a single `name` field. I prefer to split that into `first` and `last` fields. I have updated the `USERS` table migration, `User` model, `UserFactory`, and `DatabaseSeeder` accordingly.
 
+*(technically had to update types as well)*
+
 ### Timestamps
 
 By default, Laravel expects `created_at` and `updated_at` columns to exist on a model's corresponding database table. I prefer to use `last_updated` and `date_created` field names for a model's timestamps.
