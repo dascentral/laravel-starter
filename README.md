@@ -31,6 +31,17 @@ I made two manual modifications related to the database configuration:
 1. I apply a custom `DB_DATABASE` value within the `.env.example` and `.env` files
 2. I set the database connection to MySQL
 
+The database config appears as follows:
+
+```bash
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=NAME
+DB_USERNAME=root
+DB_PASSWORD=
+```
+
 ## IDE Configuration
 
 I currently use [Cursor](https://www.cursor.com/) as my IDE. This repository contains a `.vscode` folder that contains my preferred settings and extensions.
