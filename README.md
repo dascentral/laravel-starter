@@ -74,11 +74,16 @@ curl -o phpstan.neon https://raw.githubusercontent.com/dascentral/laravel-starte
 
 I always install the following first-party packages:
 
+* [Laravel Boost](https://github.com/laravel/boost)
 * [Laravel Horizon](https://laravel.com/docs/12.x/horizon)
 * [Laravel Pulse](https://laravel.com/docs/12.x/pulse)
 * [Laravel Telescope](https://laravel.com/docs/12.x/telescope)
 
 ```bash
+# Laravel Boost
+composer require laravel/boost --dev
+php artisan boost:install
+
 # Laravel Horizon
 composer require laravel/horizon
 php artisan horizon:install
