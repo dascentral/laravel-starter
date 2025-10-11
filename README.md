@@ -22,24 +22,30 @@ In 2024, the Laravel Team launched [starter kits](https://laravel.com/starter-ki
 laravel new --react --pest <name>
 ```
 
-This starter repo is specific to that stack, but it may have conventions that benefit any Laravel application.
+This starter repo is specific to that stack.
 
-## Database
+## Application Configuration
 
-I made two manual modifications related to the database configuration:
+I try really hard to embrace the framework defaults. However, I do make a few modifications that include:
 
-1. I apply a custom `DB_DATABASE` value within the `.env.example` and `.env` files
-2. I set the database connection to MySQL
+* `APP_NAME` &mdash; *Apply a custom value*
+* `APP_URL` &mdash; *Apply a custom value*
+* `CACHE_STORE` &mdash; Set to `redis`. I use this locally and in production.
+* `DB_CONNECTION` &mdash; Set to `mysql`
+* `DB_NAME` &mdash; *Apply a custom value*
+* `QUEUE_CONNECTION` &mdash; Set to `sync`. In production, I use `redis` and [Laravel Horizon](https://laravel.com/docs/12.x/horizon).
+* `SESSION_DRIVER` &mdash; Set to `redis`
 
-The database config appears as follows:
+Execute the following command to download the custom `.env.example`:
 
 ```bash
-DB_CONNECTION=mysql
-DB_HOST=127.0.0.1
-DB_PORT=3306
-DB_DATABASE=NAME
-DB_USERNAME=root
-DB_PASSWORD=
+curl -o .env.example https://raw.githubusercontent.com/dascentral/laravel-starter/refs/heads/main/.env.example
+```
+
+The Laravel Installer generates an `APP_KEY` value for you automatically. You can run the following from the root of the repo to refresh your `.env` and create a new `APP_KEY` before applying your custom values.
+
+```bash
+cp .env.example .env && php artisan key:generate
 ```
 
 ## IDE Configuration
@@ -49,10 +55,8 @@ I currently use [Cursor](https://www.cursor.com/) as my IDE. This repository con
 To replicate this setup within your project:
 
 ```bash
-mkdir -p .vscode
-
-curl -o .vscode/extensions.json https://raw.githubusercontent.com/dascentral/laravel-starter/refs/heads/main/.vscode/extensions.json
-
+mkdir -p .vscode && \
+curl -o .vscode/extensions.json https://raw.githubusercontent.com/dascentral/laravel-starter/refs/heads/main/.vscode/extensions.json && \
 curl -o .vscode/settings.json https://raw.githubusercontent.com/dascentral/laravel-starter/refs/heads/main/.vscode/settings.json
 ```
 
@@ -63,16 +67,9 @@ A new Laravel application comes with [Prettier](https://prettier.io), [ESLint](h
 This repository contains my preferred configuration files for each tool. You can download these files into your repository via the following commands:
 
 ```bash
-# .editorconfig
-curl -o .editorconfig https://raw.githubusercontent.com/dascentral/laravel-starter/refs/heads/main/.editorconfig
-
-# .prettierrc
-curl -o .prettierrc https://raw.githubusercontent.com/dascentral/laravel-starter/refs/heads/main/.prettierrc
-
-# esling.config.js
-curl -o eslint.config.js https://raw.githubusercontent.com/dascentral/laravel-starter/refs/heads/main/eslint.config.js
-
-# pint.json
+curl -o .editorconfig https://raw.githubusercontent.com/dascentral/laravel-starter/refs/heads/main/.editorconfig && \
+curl -o .prettierrc https://raw.githubusercontent.com/dascentral/laravel-starter/refs/heads/main/.prettierrc && \
+curl -o eslint.config.js https://raw.githubusercontent.com/dascentral/laravel-starter/refs/heads/main/eslint.config.js && \
 curl -o pint.json https://raw.githubusercontent.com/dascentral/laravel-starter/refs/heads/main/pint.json
 ```
 
@@ -210,58 +207,4 @@ curl -o tests/Feature/Settings/ProfileUpdateTest.php https://raw.githubuserconte
 curl -o resources/js/pages/auth/register.tsx https://raw.githubusercontent.com/dascentral/laravel-starter/refs/heads/main/resources/js/pages/auth/register.tsx && \
 curl -o resources/js/components/user-info.tsx https://raw.githubusercontent.com/dascentral/laravel-starter/refs/heads/main/resources/js/components/user-info.tsx && \
 curl -o resources/js/pages/settings/profile.tsx https://raw.githubusercontent.com/dascentral/laravel-starter/refs/heads/main/resources/js/pages/settings/profile.tsx
-```
-
-## Application Configuration
-
-I try really hard to embrace the framework defaults. However, I do make a few modifications.
-
-Execute the following command to download these customizations:
-
-```bash
-curl -o .env.example https://raw.githubusercontent.com/dascentral/laravel-starter/refs/heads/main/.env.example
-```
-
-### App Config
-
-I give the application a custom `APP_NAME` and `APP_URL` since those values will be unique per project.
-
-### Cache Config
-
-I run Redis across all environments and configure the `CACHE_STORE` accordingly.
-
-```env
-CACHE_STORE="redis"
-```
-
-### Database Config
-
-I also run MySQL across all environments and configure the `DB_CONNECTION` accordingly.
-
-```env
-DB_CONNECTION="mysql"
-```
-
-### Queue Config
-
-I prefer the `sync` queue connection in my local development environment because it eliminates the need to run queue workers.
-
-```env
-# local development
-QUEUE_CONNECTION="sync"
-```
-
-In production, I leverage Redis and [Laravel Horizon](https://laravel.com/docs/12.x/horizon).
-
-```env
-# production
-QUEUE_CONNECTION="redis"
-```
-
-### Session Config
-
-I Redis for the Session driver across all environments.
-
-```env
-SESSION_DRIVER="redis"
 ```
