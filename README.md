@@ -192,7 +192,7 @@ I prefer to use the `$guarded` model attribute as opposed to `$fillable` to mana
 
 ### File Download
 
-Execute the following commands to download these customizations into your project.
+Execute the following ridiculous series of commands to download these customizations into your project.
 
 ```bash
 curl -o app/Models/User.php https://raw.githubusercontent.com/dascentral/laravel-starter/refs/heads/main/app/Models/User.php && \
