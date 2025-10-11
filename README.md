@@ -203,7 +203,7 @@ curl -o database/factories/UserFactory.php https://raw.githubusercontent.com/das
 curl -o database/migrations/0001_01_01_000000_create_users_table.php https://raw.githubusercontent.com/dascentral/laravel-starter/refs/heads/main/database/migrations/0001_01_01_000000_create_users_table.php && \
 curl -o database/seeders/DatabaseSeeder.php https://raw.githubusercontent.com/dascentral/laravel-starter/refs/heads/main/database/seeders/DatabaseSeeder.php && \
 curl -o resources/js/types/index.d.ts https://raw.githubusercontent.com/dascentral/laravel-starter/refs/heads/main/resources/js/types/index.d.ts && \
-curl -o app/Http/Controllers/RegisteredUserController.php https://raw.githubusercontent.com/dascentral/laravel-starter/refs/heads/main/app/Http/Controllers/RegisteredUserController.php && \
+curl -o app/Http/Controllers/Auth/RegisteredUserController.php https://raw.githubusercontent.com/dascentral/laravel-starter/refs/heads/main/app/Http/Controllers/Auth/RegisteredUserController.php && \
 curl -o app/Http/Requests/Settings/ProfileUpdateRequest.php https://raw.githubusercontent.com/dascentral/laravel-starter/refs/heads/main/app/Http/Requests/Settings/ProfileUpdateRequest.php && \
 curl -o tests/Feature/Auth/RegistrationTest.php https://raw.githubusercontent.com/dascentral/laravel-starter/refs/heads/main/tests/Feature/Auth/RegistrationTest.php && \
 curl -o tests/Feature/Settings/ProfileUpdateTest.php https://raw.githubusercontent.com/dascentral/laravel-starter/refs/heads/main/tests/Feature/Settings/ProfileUpdateTest.php && \
