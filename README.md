@@ -240,13 +240,3 @@ I Redis for the Session driver across all environments.
 ```env
 SESSION_DRIVER="redis"
 ```
-
-## Database
-
-### Migrations
-
-Since I use Redis for Larevel's cache feature, I can remove the migration for the `cache` table.
-
-```bash
-rm database/migrations/0001_01_01_000001_create_cache_table.php
-```
