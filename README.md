@@ -160,7 +160,7 @@ I have a few preferences that require modifications to the `User` model that com
 
 ### First and Last
 
-The default `User` model in Laravel comes with a single `name` field. I prefer to split that into `first` and `last` fields. This change results in updates to several files:
+The default `User` model in Laravel comes with a single `name` field. I prefer to split that into `first` and `last` fields. This is a **non-trivial change** that results in updates to several files:
 
 * `database/migrations/0001_01_01_000000_create_users_table.php`
 * `app/Models/User.php`
@@ -171,6 +171,9 @@ The default `User` model in Laravel comes with a single `name` field. I prefer t
 * `app/Http/Requests/Settings/ProfileUpdateRequest.php`
 * `tests/Feature/Auth/RegistrationTest.php`
 * `tests/Feature/Settings/ProfileUpdateTest.php`
+* `resources/js/pages/auth/register.tsx`
+* `resources/js/components/user-info.tsx`
+* `resources/js/pages/settings/profile.tsx`
 
 ### Timestamps
 
@@ -203,7 +206,10 @@ curl -o resources/js/types/index.d.ts https://raw.githubusercontent.com/dascentr
 curl -o app/Http/Controllers/RegisteredUserController.php https://raw.githubusercontent.com/dascentral/laravel-starter/refs/heads/main/app/Http/Controllers/RegisteredUserController.php && \
 curl -o app/Http/Requests/Settings/ProfileUpdateRequest.php https://raw.githubusercontent.com/dascentral/laravel-starter/refs/heads/main/app/Http/Requests/Settings/ProfileUpdateRequest.php && \
 curl -o tests/Feature/Auth/RegistrationTest.php https://raw.githubusercontent.com/dascentral/laravel-starter/refs/heads/main/tests/Feature/Auth/RegistrationTest.php && \
-curl -o tests/Feature/Settings/ProfileUpdateTest.php https://raw.githubusercontent.com/dascentral/laravel-starter/refs/heads/main/tests/Feature/Settings/ProfileUpdateTest.php
+curl -o tests/Feature/Settings/ProfileUpdateTest.php https://raw.githubusercontent.com/dascentral/laravel-starter/refs/heads/main/tests/Feature/Settings/ProfileUpdateTest.php && \
+curl -o resources/js/pages/auth/register.tsx https://raw.githubusercontent.com/dascentral/laravel-starter/refs/heads/main/resources/js/pages/auth/register.tsx && \
+curl -o resources/js/components/user-info.tsx https://raw.githubusercontent.com/dascentral/laravel-starter/refs/heads/main/resources/js/components/user-info.tsx && \
+curl -o resources/js/pages/settings/profile.tsx https://raw.githubusercontent.com/dascentral/laravel-starter/refs/heads/main/resources/js/pages/settings/profile.tsx
 ```
 
 ## Application Configuration
