@@ -232,7 +232,7 @@ DB_CONNECTION="mysql"
 
 ### Queue Config
 
-I prefer the `sync` queue connection in my local development environment so that I do not have to worry about running any queue workers.
+I prefer the `sync` queue connection in my local development environment because it eliminates the need to run queue workers.
 
 ```env
 # local development
