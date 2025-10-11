@@ -50,7 +50,6 @@ export default function Register() {
                                     id="last"
                                     type="text"
                                     required
-                                    autoFocus
                                     tabIndex={1}
                                     autoComplete="family-name"
                                     name="last"
