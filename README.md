@@ -208,3 +208,20 @@ curl -o resources/js/pages/auth/register.tsx https://raw.githubusercontent.com/d
 curl -o resources/js/components/user-info.tsx https://raw.githubusercontent.com/dascentral/laravel-starter/refs/heads/main/resources/js/components/user-info.tsx && \
 curl -o resources/js/pages/settings/profile.tsx https://raw.githubusercontent.com/dascentral/laravel-starter/refs/heads/main/resources/js/pages/settings/profile.tsx
 ```
+
+## Composer Scripts
+
+I will manually add the following scripts to the `composer.json`:
+
+```json
+"analyze": [
+  "./vendor/bin/phpstan analyse --ansi --memory-limit 512M"
+],
+"analyze:baseline": [
+  "./vendor/bin/phpstan analyse --generate-baseline"
+],
+"format": [
+  "./vendor/bin/pint"
+],
+```
+
