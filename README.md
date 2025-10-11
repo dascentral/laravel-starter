@@ -208,7 +208,7 @@ curl -o tests/Feature/Settings/ProfileUpdateTest.php https://raw.githubuserconte
 
 ## Application Configuration
 
-I try real hard to embrace the framework defaults. However, I do make a few modifications.
+I try really hard to embrace the framework defaults. However, I do make a few modifications.
 
 ### App Config
 
