@@ -160,9 +160,17 @@ I have a few preferences that require modifications to the `User` model that com
 
 ### First and Last
 
-The default `User` model in Laravel comes with a single `name` field. I prefer to split that into `first` and `last` fields. I have updated the `USERS` table migration, `User` model, `UserFactory`, and `DatabaseSeeder` accordingly.
+The default `User` model in Laravel comes with a single `name` field. I prefer to split that into `first` and `last` fields. This change results in updates to several files:
 
-*(technically had to update types as well)*
+* `database/migrations/0001_01_01_000000_create_users_table.php`
+* `app/Models/User.php`
+* `database/factories/UserFactory.php`
+* `database/seeders/DatabaseSeeder.php`
+* `resources/js/types/index.d.ts`
+* `app/Http/Controllers/RegisteredUserController.php`
+* `app/Http/Requests/Settings/ProfileUpdateRequest.php`
+* `tests/Feature/Auth/RegistrationTest.php`
+* `tests/Feature/Settings/ProfileUpdateTest.php`
 
 ### Timestamps
 
@@ -190,7 +198,12 @@ Execute the following commands to download these customizations into your projec
 curl -o app/Models/User.php https://raw.githubusercontent.com/dascentral/laravel-starter/refs/heads/main/app/Models/User.php && \
 curl -o database/factories/UserFactory.php https://raw.githubusercontent.com/dascentral/laravel-starter/refs/heads/main/database/factories/UserFactory.php && \
 curl -o database/migrations/0001_01_01_000000_create_users_table.php https://raw.githubusercontent.com/dascentral/laravel-starter/refs/heads/main/database/migrations/0001_01_01_000000_create_users_table.php && \
-curl -o database/seeders/DatabaseSeeder.php https://raw.githubusercontent.com/dascentral/laravel-starter/refs/heads/main/database/seeders/DatabaseSeeder.php
+curl -o database/seeders/DatabaseSeeder.php https://raw.githubusercontent.com/dascentral/laravel-starter/refs/heads/main/database/seeders/DatabaseSeeder.php && \
+curl -o resources/js/types/index.d.ts https://raw.githubusercontent.com/dascentral/laravel-starter/refs/heads/main/resources/js/types/index.d.ts && \
+curl -o app/Http/Controllers/RegisteredUserController.php https://raw.githubusercontent.com/dascentral/laravel-starter/refs/heads/main/app/Http/Controllers/RegisteredUserController.php && \
+curl -o app/Http/Requests/Settings/ProfileUpdateRequest.php https://raw.githubusercontent.com/dascentral/laravel-starter/refs/heads/main/app/Http/Requests/Settings/ProfileUpdateRequest.php && \
+curl -o tests/Feature/Auth/RegistrationTest.php https://raw.githubusercontent.com/dascentral/laravel-starter/refs/heads/main/tests/Feature/Auth/RegistrationTest.php && \
+curl -o tests/Feature/Settings/ProfileUpdateTest.php https://raw.githubusercontent.com/dascentral/laravel-starter/refs/heads/main/tests/Feature/Settings/ProfileUpdateTest.php
 ```
 
 ## Application Configuration
