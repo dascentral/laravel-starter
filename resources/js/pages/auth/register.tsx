@@ -50,7 +50,7 @@ export default function Register() {
                                     id="last"
                                     type="text"
                                     required
-                                    tabIndex={1}
+                                    tabIndex={2}
                                     autoComplete="family-name"
                                     name="last"
                                     placeholder="Full name"
