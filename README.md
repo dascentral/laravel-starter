@@ -187,12 +187,9 @@ I prefer to use the `$guarded` model attribute as opposed to `$fillable` to mana
 Execute the following commands to download these customizations into your project.
 
 ```bash
-curl -o app/Models/User.php https://raw.githubusercontent.com/dascentral/laravel-starter/refs/heads/main/app/Models/User.php
-
-curl -o database/factories/UserFactory.php https://raw.githubusercontent.com/dascentral/laravel-starter/refs/heads/main/database/factories/UserFactory.php
-
-curl -o database/migrations/0001_01_01_000000_create_users_table.php https://raw.githubusercontent.com/dascentral/laravel-starter/refs/heads/main/database/migrations/0001_01_01_000000_create_users_table.php
-
+curl -o app/Models/User.php https://raw.githubusercontent.com/dascentral/laravel-starter/refs/heads/main/app/Models/User.php && \
+curl -o database/factories/UserFactory.php https://raw.githubusercontent.com/dascentral/laravel-starter/refs/heads/main/database/factories/UserFactory.php && \
+curl -o database/migrations/0001_01_01_000000_create_users_table.php https://raw.githubusercontent.com/dascentral/laravel-starter/refs/heads/main/database/migrations/0001_01_01_000000_create_users_table.php && \
 curl -o database/seeders/DatabaseSeeder.php https://raw.githubusercontent.com/dascentral/laravel-starter/refs/heads/main/database/seeders/DatabaseSeeder.php
 ```
 
