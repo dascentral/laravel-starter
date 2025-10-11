@@ -216,6 +216,12 @@ curl -o resources/js/pages/settings/profile.tsx https://raw.githubusercontent.co
 
 I try really hard to embrace the framework defaults. However, I do make a few modifications.
 
+Execute the following command to download these customizations:
+
+```bash
+curl -o .env.example https://raw.githubusercontent.com/dascentral/laravel-starter/refs/heads/main/.env.example
+```
+
 ### App Config
 
 I give the application a custom `APP_NAME` and `APP_URL` since those values will be unique per project.
