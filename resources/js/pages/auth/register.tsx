@@ -53,7 +53,7 @@ export default function Register() {
                                     tabIndex={2}
                                     autoComplete="family-name"
                                     name="last"
-                                    placeholder="Full name"
+                                    placeholder="Last name"
                                 />
                                 <InputError
                                     message={errors.last}
