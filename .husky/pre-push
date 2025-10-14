@@ -1,0 +1,29 @@
+echo "🔍 Running pre-push checks..."
+
+# Frontend checks on staged files
+echo "📦 Checking staged frontend files..."
+npx lint-staged
+
+if [ $? -ne 0 ]; then
+    echo "❌ Frontend checks failed."
+    exit 1
+fi
+
+# Backend checks on entire codebase
+echo "🐘 Running Laravel Pint..."
+./vendor/bin/pint --test
+
+if [ $? -ne 0 ]; then
+    echo "❌ Laravel Pint found issues. Run './vendor/bin/pint' to fix."
+    exit 1
+fi
+
+echo "🔬 Running Larastan..."
+./vendor/bin/phpstan analyse
+
+if [ $? -ne 0 ]; then
+    echo "❌ Larastan found issues. Please fix before pushing."
+    exit 1
+fi
+
+echo "✅ All checks passed!"
