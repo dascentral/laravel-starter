@@ -87,6 +87,25 @@ Larastan requires a `phpstan.neon` configuration file. You can review the [PHPSt
 curl -o phpstan.neon https://raw.githubusercontent.com/dascentral/laravel-starter/refs/heads/main/phpstan.neon
 ```
 
+### Husky
+
+The Laravel starter kits use GitHub Actions to lint and test the code. While I still run tests in the CI/CD space, I prefer to use [Husky](https://typicode.github.io/husky/) to run ESlint, Prettier, Laravel Pint, and Larastan via the `pre-push` hook.
+
+First, install Husky and [lint-staged](https://github.com/lint-staged/lint-staged). Then, issue the following commands from the root of the repo:
+
+```bash
+npm install --save-dev husky lint-staged && \
+npx husky init && \
+rm .husky/pre-commit
+```
+
+You can download my `lint-staged` config and `pre-push` script here:
+
+```bash
+curl -o .lintstagedrc.js https://raw.githubusercontent.com/dascentral/laravel-starter/refs/heads/main/.lintstagedrc.js && \
+curl -o .husky/pre-push https://raw.githubusercontent.com/dascentral/laravel-starter/refs/heads/main/.husky/pre-push
+```
+
 ## Composer Packages
 
 ### First-Party
@@ -224,4 +243,3 @@ I will manually add the following scripts to the `composer.json`:
   "./vendor/bin/pint"
 ],
 ```
-
