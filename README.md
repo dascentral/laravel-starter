@@ -106,6 +106,12 @@ curl -o .lintstagedrc.js https://raw.githubusercontent.com/dascentral/laravel-st
 curl -o .husky/pre-push https://raw.githubusercontent.com/dascentral/laravel-starter/refs/heads/main/.husky/pre-push
 ```
 
+After setting up Husky, you no longer need the lint workflow.
+
+```bash
+rm .github/workflows/lint.yml
+```
+
 ## Composer Packages
 
 ### First-Party
