@@ -100,7 +100,7 @@ npm install --save-dev husky lint-staged && \
 npx husky init
 ```
 
-You can download my `lint-staged` config and `pre-push` script here:
+You can download the relevant files into your repository via the following commands:
 
 ```bash
 curl -o .lintstagedrc.js https://raw.githubusercontent.com/dascentral/laravel-starter/refs/heads/main/.lintstagedrc.js && \
