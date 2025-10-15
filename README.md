@@ -89,20 +89,22 @@ curl -o phpstan.neon https://raw.githubusercontent.com/dascentral/laravel-starte
 
 ### Husky
 
-The Laravel starter kits use GitHub Actions to lint and test the code. While I still run tests in the CI/CD space, I prefer to use [Husky](https://typicode.github.io/husky/) to run ESlint, Prettier, Laravel Pint, and Larastan via the `pre-push` hook.
+The Laravel starter kits use GitHub Actions to lint and test the code. While I still run tests in the CI/CD space, I prefer to use [Husky](https://typicode.github.io/husky/) to run ESlint, Prettier, Laravel Pint, and Larastan.
+
+I use `pre-commit` to run ESLint and Prettier and `pre-push` for Laravel Pint and Larastan.
 
 First, install Husky and [lint-staged](https://github.com/lint-staged/lint-staged). Then, issue the following commands from the root of the repo:
 
 ```bash
 npm install --save-dev husky lint-staged && \
-npx husky init && \
-rm .husky/pre-commit
+npx husky init
 ```
 
 You can download my `lint-staged` config and `pre-push` script here:
 
 ```bash
 curl -o .lintstagedrc.js https://raw.githubusercontent.com/dascentral/laravel-starter/refs/heads/main/.lintstagedrc.js && \
+curl -o .husky/pre-commit https://raw.githubusercontent.com/dascentral/laravel-starter/refs/heads/main/.husky/pre-commit && \
 curl -o .husky/pre-push https://raw.githubusercontent.com/dascentral/laravel-starter/refs/heads/main/.husky/pre-push
 ```
 
