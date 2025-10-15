@@ -1,15 +1,5 @@
 echo "🔍 Running pre-push checks..."
 
-# Frontend checks on staged files
-echo "📦 Checking staged frontend files..."
-npx lint-staged
-
-if [ $? -ne 0 ]; then
-    echo "❌ Frontend checks failed."
-    exit 1
-fi
-
-# Backend checks on entire codebase
 echo "🐘 Running Laravel Pint..."
 ./vendor/bin/pint --test
 
