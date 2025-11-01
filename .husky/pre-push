@@ -9,7 +9,7 @@ if [ $? -ne 0 ]; then
 fi
 
 echo "🔬 Running Larastan..."
-./vendor/bin/phpstan analyse
+./vendor/bin/phpstan analyse --ansi --memory-limit 512M
 
 if [ $? -ne 0 ]; then
     echo "❌ Larastan found issues. Please fix before pushing."
