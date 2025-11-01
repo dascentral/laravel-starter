@@ -2,9 +2,9 @@
 
 ## Introduction
 
-Rather than having a template repository for new Laravel Projects, I'm going after a step-by-step script that outlines the changes that I typically make and why. I feel this approach will be easier to maintain and will provide more value to guests.
+Rather than having a template repository for new Laravel Projects, I'm going after a step-by-step script that outlines the changes that I typically make and why. I feel this approach will be easier to maintain and will provide more value to visitors.
 
-And let's be honest... we're replacing this repo with AI instructions before much longer, right?
+And let's be honest... it won't be long before we are simply giving the instructions to an AI agent.
 
 ### Context
 
