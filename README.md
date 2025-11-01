@@ -69,7 +69,7 @@ This repository contains my preferred configuration files for each tool. You can
 ```bash
 curl -o .editorconfig https://raw.githubusercontent.com/dascentral/laravel-starter/refs/heads/main/.editorconfig && \
 curl -o .prettierrc https://raw.githubusercontent.com/dascentral/laravel-starter/refs/heads/main/.prettierrc && \
-curl -o eslint.config.js https://raw.githubusercontent.com/dascentral/laravel-starter/refs/heads/main/eslint.config.js && \
+curl -o eslint.config.mjs https://raw.githubusercontent.com/dascentral/laravel-starter/refs/heads/main/eslint.config.mjs && \
 curl -o pint.json https://raw.githubusercontent.com/dascentral/laravel-starter/refs/heads/main/pint.json
 ```
 
@@ -103,7 +103,7 @@ npx husky init
 You can download the relevant files into your repository via the following commands:
 
 ```bash
-curl -o .lintstagedrc.js https://raw.githubusercontent.com/dascentral/laravel-starter/refs/heads/main/.lintstagedrc.js && \
+curl -o lint-staged.config.mjs https://raw.githubusercontent.com/dascentral/laravel-starter/refs/heads/main/lint-staged.config.mjs && \
 curl -o .husky/pre-commit https://raw.githubusercontent.com/dascentral/laravel-starter/refs/heads/main/.husky/pre-commit && \
 curl -o .husky/pre-push https://raw.githubusercontent.com/dascentral/laravel-starter/refs/heads/main/.husky/pre-push
 ```
