@@ -126,22 +126,15 @@ I always install the following first-party packages:
 * [Laravel Telescope](https://laravel.com/docs/12.x/telescope)
 
 ```bash
-# Laravel Boost
-composer require laravel/boost --dev
-php artisan boost:install
-
-# Laravel Horizon
-composer require laravel/horizon
-php artisan horizon:install
-
-# Laravel Pulse
-composer require laravel/pulse
-php artisan vendor:publish --provider="Laravel\Pulse\PulseServiceProvider"
-php artisan migrate
-
-# Laravel Telescope
-composer require laravel/telescope
-php artisan telescope:install
+composer require laravel/boost --dev && \
+php artisan boost:install && \
+composer require laravel/horizon && \
+php artisan horizon:install && \
+composer require laravel/pulse && \
+php artisan vendor:publish --provider="Laravel\Pulse\PulseServiceProvider" && \
+php artisan migrate && \
+composer require laravel/telescope && \
+php artisan telescope:install && \
 php artisan migrate
 ```
 
