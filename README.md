@@ -13,6 +13,7 @@ This repository customizes a new [Laravel 12](https://laravel.com/docs/12.x) app
 ### Resources
 
 * [Essentials](https://laravel-news.com/laravel-essentials) &mdash; Essentials is a package created by Nuno Maduro that provides better defaults for your Laravel applications.
+* [The Next Step After Fresh Laravel Installation: Setting Up Your AppServiceProvider](https://medium.com/the-artisans-journal/the-next-step-after-fresh-laravel-installation-setting-up-your-appserviceprovider-a010cb69214e) &mdash; Great inventory of suggestions for additional modifications you can consider making to your `AppServiceProvider` immediately after creating a new Laravel application.
 
 ## Create New Application
 
