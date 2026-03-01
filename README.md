@@ -27,16 +27,6 @@ This starter repo is specific to that stack.
 
 ## Application Configuration
 
-I try really hard to embrace the framework defaults. However, I do make a few modifications that include:
-
-* `APP_NAME` &mdash; *Apply a custom value*
-* `APP_URL` &mdash; *Apply a custom value*
-* `CACHE_STORE` &mdash; Set to `redis`. I use this locally and in production.
-* `DB_CONNECTION` &mdash; Set to `mysql`
-* `DB_NAME` &mdash; *Apply a custom value*
-* `QUEUE_CONNECTION` &mdash; Set to `sync`. In production, I use `redis` and [Laravel Horizon](https://laravel.com/docs/12.x/horizon).
-* `SESSION_DRIVER` &mdash; Set to `redis`
-
 Execute the following command to download the custom `.env.example`:
 
 ```bash
@@ -48,6 +38,19 @@ The Laravel Installer generates an `APP_KEY` value for you automatically. You ca
 ```bash
 cp .env.example .env && php artisan key:generate
 ```
+
+I try really hard to embrace the framework defaults. However, I do make a few modifications that include:
+
+* `CACHE_STORE` &mdash; Set to `redis`. I use this locally and in production.
+* `DB_CONNECTION` &mdash; Set to `mysql`
+* `QUEUE_CONNECTION` &mdash; Set to `sync`. In production, I use `redis` and [Laravel Horizon](https://laravel.com/docs/12.x/horizon).
+* `SESSION_DRIVER` &mdash; Set to `redis`
+
+The following variables will inevitably require a custom value:
+
+* `APP_NAME`
+* `APP_URL`
+* `DB_NAME`
 
 ## IDE Configuration
 
