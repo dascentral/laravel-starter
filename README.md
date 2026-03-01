@@ -97,8 +97,7 @@ I use `pre-commit` to run ESLint and Prettier and `pre-push` for Laravel Pint an
 First, install Husky and [lint-staged](https://github.com/lint-staged/lint-staged). Then, issue the following commands from the root of the repo:
 
 ```bash
-npm install --save-dev husky lint-staged && \
-npx husky init
+npm install --save-dev husky lint-staged && npx husky init
 ```
 
 You can download the relevant files into your repository via the following commands:
