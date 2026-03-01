@@ -132,7 +132,6 @@ I always install the following first-party packages:
 composer require laravel/horizon laravel/pulse laravel/telescope && \
 php artisan horizon:install && \
 php artisan vendor:publish --provider="Laravel\Pulse\PulseServiceProvider" && \
-php artisan migrate && \
 php artisan telescope:install && \
 php artisan migrate
 ```
