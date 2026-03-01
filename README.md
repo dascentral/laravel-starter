@@ -17,7 +17,7 @@ This repository customizes a new [Laravel 12](https://laravel.com/docs/12.x) app
 
 ## Create New Application
 
-In 2024, the Laravel Team launched [starter kits](https://laravel.com/starter-kits) that enable you to get a new Laravel application up and running quickly with the stack of your choice. I prefer the Inertia.js + React + Pest stack.
+In 2024, the Laravel Team launched [starter kits](https://laravel.com/starter-kits) that enable you to get a new Laravel application up and running quickly with the stack of your choice. I prefer the Inertia.js + React + Pest stack. I also install [Laravel Boost](https://laravel.com/ai/boost) during the initial installation.
 
 ```bash
 laravel new --react --pest <name>
@@ -128,8 +128,6 @@ I always install the following first-party packages:
 
 ```bash
 composer require laravel/horizon laravel/pulse laravel/telescope && \
-composer require laravel/boost --dev && \
-php artisan boost:install && \
 php artisan horizon:install && \
 php artisan vendor:publish --provider="Laravel\Pulse\PulseServiceProvider" && \
 php artisan migrate && \
