@@ -146,8 +146,8 @@ I always install the following third-party packages:
 * [pestphp/pest-plugin-faker](https://pestphp.com/docs/plugins#content-faker)
 
 ```bash
-composer require spatie/laravel-backup spatie/laravel-data spatie/laravel-ray spatie/laravel-view-models predis/predis && \
-composer require --dev pestphp/pest-plugin-faker
+composer require -W spatie/laravel-backup spatie/laravel-data spatie/laravel-ray spatie/laravel-view-models predis/predis && \
+composer require -W --dev pestphp/pest-plugin-faker
 ```
 
 ### Laravel Nova
