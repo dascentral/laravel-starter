@@ -168,64 +168,6 @@ Ensure you have a valid `auth.json` configured for installation, and then add `l
 composer require laravel/nova
 ```
 
-## User Model
-
-I have a few preferences that require modifications to the `User` model that comes out-of-the-box with a new Laravel application.
-
-### First and Last
-
-The default `User` model in Laravel comes with a single `name` field. I prefer to split that into `first` and `last` fields. This is a **non-trivial change** that results in updates to several files:
-
-* `database/migrations/0001_01_01_000000_create_users_table.php`
-* `app/Models/User.php`
-* `database/factories/UserFactory.php`
-* `database/seeders/DatabaseSeeder.php`
-* `resources/js/types/index.d.ts`
-* `app/Http/Controllers/RegisteredUserController.php`
-* `app/Http/Requests/Settings/ProfileUpdateRequest.php`
-* `tests/Feature/Auth/RegistrationTest.php`
-* `tests/Feature/Settings/ProfileUpdateTest.php`
-* `resources/js/pages/auth/register.tsx`
-* `resources/js/components/user-info.tsx`
-* `resources/js/pages/settings/profile.tsx`
-
-### Timestamps
-
-By default, Laravel expects `created_at` and `updated_at` columns to exist on a model's corresponding database table. I prefer to use `last_updated` and `date_created` field names for a model's timestamps.
-
-I have updated the `users` table and `User` model accordingly.
-
-### Guarded vs. Fillable
-
-I prefer to use the `$guarded` model attribute as opposed to `$fillable` to manage [mass assignment protection](https://laravel.com/docs/12.x/eloquent#mass-assignment). As a result, I have updated the `User` model accordingly.
-
-```php
-    protected $guarded = [
-        'id',
-        'date_created',
-        'last_updated',
-    ];
-```
-
-### File Download
-
-Execute the following ridiculous series of commands to download these customizations into your project.
-
-```bash
-curl -o app/Models/User.php https://raw.githubusercontent.com/dascentral/laravel-starter/refs/heads/main/app/Models/User.php && \
-curl -o database/factories/UserFactory.php https://raw.githubusercontent.com/dascentral/laravel-starter/refs/heads/main/database/factories/UserFactory.php && \
-curl -o database/migrations/0001_01_01_000000_create_users_table.php https://raw.githubusercontent.com/dascentral/laravel-starter/refs/heads/main/database/migrations/0001_01_01_000000_create_users_table.php && \
-curl -o database/seeders/DatabaseSeeder.php https://raw.githubusercontent.com/dascentral/laravel-starter/refs/heads/main/database/seeders/DatabaseSeeder.php && \
-curl -o resources/js/types/index.d.ts https://raw.githubusercontent.com/dascentral/laravel-starter/refs/heads/main/resources/js/types/index.d.ts && \
-curl -o app/Http/Controllers/Auth/RegisteredUserController.php https://raw.githubusercontent.com/dascentral/laravel-starter/refs/heads/main/app/Http/Controllers/Auth/RegisteredUserController.php && \
-curl -o app/Http/Requests/Settings/ProfileUpdateRequest.php https://raw.githubusercontent.com/dascentral/laravel-starter/refs/heads/main/app/Http/Requests/Settings/ProfileUpdateRequest.php && \
-curl -o tests/Feature/Auth/RegistrationTest.php https://raw.githubusercontent.com/dascentral/laravel-starter/refs/heads/main/tests/Feature/Auth/RegistrationTest.php && \
-curl -o tests/Feature/Settings/ProfileUpdateTest.php https://raw.githubusercontent.com/dascentral/laravel-starter/refs/heads/main/tests/Feature/Settings/ProfileUpdateTest.php && \
-curl -o resources/js/pages/auth/register.tsx https://raw.githubusercontent.com/dascentral/laravel-starter/refs/heads/main/resources/js/pages/auth/register.tsx && \
-curl -o resources/js/components/user-info.tsx https://raw.githubusercontent.com/dascentral/laravel-starter/refs/heads/main/resources/js/components/user-info.tsx && \
-curl -o resources/js/pages/settings/profile.tsx https://raw.githubusercontent.com/dascentral/laravel-starter/refs/heads/main/resources/js/pages/settings/profile.tsx
-```
-
 ## Composer Scripts
 
 I will manually add the following scripts to the `composer.json`:
