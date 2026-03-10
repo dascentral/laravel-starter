@@ -6,12 +6,12 @@ on:
 
 jobs:
   audit:
-    uses: dascentral/reusable-workflows/.github/workflows/composer-audit.yml@c82d9b16ae70852a255ebb313bef9777c84b2368 # v0.5.0
+    uses: dascentral/reusable-workflows/.github/workflows/composer-audit.yml@e4a164e115d74ac0f585c9b4205163b2d4fc01c8 # v0.6.0
     with:
       php-version: '8.4'
 
   tests:
-    uses: dascentral/reusable-workflows/.github/workflows/laravel-tests.yml@c82d9b16ae70852a255ebb313bef9777c84b2368 # v0.5.0
+    uses: dascentral/reusable-workflows/.github/workflows/laravel-tests.yml@e4a164e115d74ac0f585c9b4205163b2d4fc01c8 # v0.6.0
     with:
       node-version: '22.20.0'
       php-version: '8.4'
@@ -21,7 +21,7 @@ jobs:
 
   deploy:
     needs: [tests, audit]
-    uses: dascentral/reusable-workflows/.github/workflows/laravel-deploy.yml@c82d9b16ae70852a255ebb313bef9777c84b2368 # v0.5.0
+    uses: dascentral/reusable-workflows/.github/workflows/laravel-deploy.yml@e4a164e115d74ac0f585c9b4205163b2d4fc01c8 # v0.6.0
     with:
       php-version: '8.4'
       node-version: '22.20.0'

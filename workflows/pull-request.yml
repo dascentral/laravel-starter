@@ -10,10 +10,10 @@ permissions:
 
 jobs:
   branch-validation:
-    uses: dascentral/reusable-workflows/.github/workflows/branch-validation.yml@c82d9b16ae70852a255ebb313bef9777c84b2368 # v0.5.0
+    uses: dascentral/reusable-workflows/.github/workflows/branch-validation.yml@e4a164e115d74ac0f585c9b4205163b2d4fc01c8 # v0.6.0
 
   lint:
-    uses: dascentral/reusable-workflows/.github/workflows/laravel-lint.yml@c82d9b16ae70852a255ebb313bef9777c84b2368 # v0.5.0
+    uses: dascentral/reusable-workflows/.github/workflows/laravel-lint.yml@e4a164e115d74ac0f585c9b4205163b2d4fc01c8 # v0.6.0
     with:
       node-version: '22.20.0'
       php-version: '8.4'
@@ -22,14 +22,14 @@ jobs:
       composer-auth: ${{ secrets.COMPOSER_AUTH }}
 
   analyze:
-    uses: dascentral/reusable-workflows/.github/workflows/laravel-analyze.yml@c82d9b16ae70852a255ebb313bef9777c84b2368 # v0.5.0
+    uses: dascentral/reusable-workflows/.github/workflows/laravel-analyze.yml@e4a164e115d74ac0f585c9b4205163b2d4fc01c8 # v0.6.0
     with:
       php-version: '8.4'
     secrets:
       composer-auth: ${{ secrets.COMPOSER_AUTH }}
 
   tests:
-    uses: dascentral/reusable-workflows/.github/workflows/laravel-tests.yml@c82d9b16ae70852a255ebb313bef9777c84b2368 # v0.5.0
+    uses: dascentral/reusable-workflows/.github/workflows/laravel-tests.yml@e4a164e115d74ac0f585c9b4205163b2d4fc01c8 # v0.6.0
     with:
       node-version: '22.20.0'
       php-version: '8.4'
