@@ -191,5 +191,5 @@ I have created several resuable workflows that facilitate pull requests and depl
 ```bash
 mkdir -p .github/workflows && \
 curl -o .github/workflows/deploy.yml https://raw.githubusercontent.com/dascentral/laravel-starter/refs/heads/main/workflows/deploy.yml && \
-curl -o .github/workflows/pull-request.yml https://raw.githubusercontent.com/dascentral/laravel-starter/refs/heads/main/workflows/pull-request.yml && \
+curl -o .github/workflows/pull-request.yml https://raw.githubusercontent.com/dascentral/laravel-starter/refs/heads/main/workflows/pull-request.yml
 ```
