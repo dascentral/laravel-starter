@@ -25,6 +25,7 @@ jobs:
     with:
       php-version: '8.4'
       node-version: '22.20.0'
+      rsync-exclude: 'deploy/rsync-exclude.txt'
       ssh-user: ${{ vars.SSH_USER }}
       ssh-host: ${{ vars.SSH_HOST }}
       destination-path: ${{ vars.DESTINATION_PATH }}
