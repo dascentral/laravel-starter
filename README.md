@@ -2,28 +2,37 @@
 
 ## Introduction
 
-Rather than having a template repository for new Laravel Projects, I'm going after a step-by-step script that outlines the changes that I typically make and why. I feel this approach will be easier to maintain and will provide more value to visitors.
+In 2024, the Laravel team launched [starter kits](https://laravel.com/starter-kits) that enable you to get a new Laravel application up and running quickly with the stack of your choice.
 
-And let's be honest... it won't be long before we are simply giving the instructions to an AI agent.
+My preferred Laravel stack includes:
 
-### Context
+- [Inertia.js](https://inertiajs.com)
+- [React](https://react.dev)
+- [Pest](https://pestphp.com)
+- [Laravel Boost](https://laravel.com/ai/boost)
 
-This repository customizes a new [Laravel 12](https://laravel.com/docs/12.x) application. Instructions are accurate as of October 2025.
+While I try very hard to embrace the framework defaults, I still make several customizations to the default installation. Rather than creating my own starter kit or template repository, I have simply inventoried the changes here. Modified files live in this repository for reference and ease of download into a new or existing application.
+
+Instructions are accurate as of March 2026 for a [Laravel 12](https://laravel.com/docs/12.x) application powered by my preferred stack.
 
 ### Resources
 
-* [Essentials](https://laravel-news.com/laravel-essentials) &mdash; Essentials is a package created by Nuno Maduro that provides better defaults for your Laravel applications.
-* [The Next Step After Fresh Laravel Installation: Setting Up Your AppServiceProvider](https://medium.com/the-artisans-journal/the-next-step-after-fresh-laravel-installation-setting-up-your-appserviceprovider-a010cb69214e) &mdash; Great inventory of suggestions for additional modifications you can consider making to your `AppServiceProvider` immediately after creating a new Laravel application.
+- [Essentials](https://laravel-news.com/laravel-essentials) &mdash; This package, created by Nuno Maduro, provides better defaults for your Laravel applications.
+- [The Next Step After Fresh Laravel Installation: Setting Up Your AppServiceProvider](https://medium.com/the-artisans-journal/the-next-step-after-fresh-laravel-installation-setting-up-your-appserviceprovider-a010cb69214e) &mdash; Great inventory of suggestions for additional modifications you can consider making to your `AppServiceProvider` immediately after creating a new Laravel application.
 
-## Create New Application
+### The Future
 
-In 2024, the Laravel Team launched [starter kits](https://laravel.com/starter-kits) that enable you to get a new Laravel application up and running quickly with the stack of your choice. I prefer the Inertia.js + React + Pest stack. I also install [Laravel Boost](https://laravel.com/ai/boost) during the initial installation.
+Given the advancement in AI code gen technology, I will be keeping a very close eye on prompts or skills that bring these customizations to bear.
+
+## Creating a New Application
+
+The following command will generate a fresh [Laravel 12](https://laravel.com/docs/12.x) application.
+
+This command will create a new application using that stack and initialize a Git repo.
 
 ```bash
-laravel new --react --pest <name>
+laravel new --git --react --npm --pest --boost <name>
 ```
-
-This starter repo is specific to that stack.
 
 ## Application Configuration
 
