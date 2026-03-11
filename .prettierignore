@@ -1,7 +1,12 @@
-node_modules/
-public/
+# Auto-generated / third-party
+bootstrap/cache/
+public/build/
+public/vendor/
 resources/js/components/ui/*
 resources/views/mail/*
 storage/
 vendor/
+
+# Lock files
 composer.lock
+package-lock.json
