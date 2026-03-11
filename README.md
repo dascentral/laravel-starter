@@ -82,6 +82,7 @@ This repository contains my preferred configuration files for each tool. You can
 ```bash
 curl -o .editorconfig https://raw.githubusercontent.com/dascentral/laravel-starter/refs/heads/main/.editorconfig && \
 curl -o .prettierrc https://raw.githubusercontent.com/dascentral/laravel-starter/refs/heads/main/.prettierrc && \
+curl -o .prettierignore https://raw.githubusercontent.com/dascentral/laravel-starter/refs/heads/main/.prettierignore && \
 curl -o eslint.config.mjs https://raw.githubusercontent.com/dascentral/laravel-starter/refs/heads/main/eslint.config.mjs && \
 curl -o pint.json https://raw.githubusercontent.com/dascentral/laravel-starter/refs/heads/main/pint.json
 ```
