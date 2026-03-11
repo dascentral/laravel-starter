@@ -41,16 +41,16 @@ cp .env.example .env && php artisan key:generate
 
 I try really hard to embrace the framework defaults. However, I do make a few modifications that include:
 
-* `CACHE_STORE` &mdash; Set to `redis`. I use this locally and in production.
-* `DB_CONNECTION` &mdash; Set to `mysql`
-* `QUEUE_CONNECTION` &mdash; Set to `sync`. In production, I use `redis` and [Laravel Horizon](https://laravel.com/docs/12.x/horizon).
-* `SESSION_DRIVER` &mdash; Set to `redis`
+- `CACHE_STORE` &mdash; Set to `redis`. I use this locally and in production.
+- `DB_CONNECTION` &mdash; Set to `mysql`
+- `QUEUE_CONNECTION` &mdash; Set to `sync`. In production, I use `redis` and [Laravel Horizon](https://laravel.com/docs/12.x/horizon).
+- `SESSION_DRIVER` &mdash; Set to `redis`
 
 The following variables will inevitably require a custom value:
 
-* `APP_NAME`
-* `APP_URL`
-* `DB_NAME`
+- `APP_NAME`
+- `APP_URL`
+- `DB_NAME`
 
 ## IDE Configuration
 
@@ -123,29 +123,29 @@ rm .github/workflows/lint.yml
 
 I always install the following first-party packages:
 
-* [Laravel Boost](https://github.com/laravel/boost)
-* [Laravel Horizon](https://laravel.com/docs/12.x/horizon)
-* [Laravel Pulse](https://laravel.com/docs/12.x/pulse)
-* [Laravel Telescope](https://laravel.com/docs/12.x/telescope)
+- [Laravel Boost](https://github.com/laravel/boost)
+- [Laravel Horizon](https://laravel.com/docs/12.x/horizon)
+- [Laravel Pulse](https://laravel.com/docs/12.x/pulse)
+- [Laravel Telescope](https://laravel.com/docs/12.x/telescope)
 
 ```bash
 composer require laravel/horizon laravel/pulse laravel/telescope && \
 php artisan horizon:install && \
 php artisan vendor:publish --provider="Laravel\Pulse\PulseServiceProvider" && \
 php artisan telescope:install && \
-php artisan migrate
+php artisan migrate:fresh --seed
 ```
 
 ### Third-Party
 
 I always install the following third-party packages:
 
-* [spatie/laravel-backup](https://spatie.be/docs/laravel-backup/v9/introduction)
-* [spatie/laravel-data](https://spatie.be/docs/laravel-data/v4/introduction)
-* [spatie/laravel-ray](https://myray.app/docs/php/laravel/installation)
-* [spatie/laravel-view-models](https://github.com/spatie/laravel-view-models)
-* [predis/predis](https://github.com/predis/predis)
-* [pestphp/pest-plugin-faker](https://pestphp.com/docs/plugins#content-faker)
+- [spatie/laravel-backup](https://spatie.be/docs/laravel-backup/v9/introduction)
+- [spatie/laravel-data](https://spatie.be/docs/laravel-data/v4/introduction)
+- [spatie/laravel-ray](https://myray.app/docs/php/laravel/installation)
+- [spatie/laravel-view-models](https://github.com/spatie/laravel-view-models)
+- [predis/predis](https://github.com/predis/predis)
+- [pestphp/pest-plugin-faker](https://pestphp.com/docs/plugins#content-faker)
 
 ```bash
 composer require -W spatie/laravel-backup spatie/laravel-data spatie/laravel-ray spatie/laravel-view-models predis/predis && \
@@ -154,7 +154,7 @@ composer require -W --dev pestphp/pest-plugin-faker
 
 The following packages require additional steps to complete installation. See their docs for details.
 
-* [spatie/laravel-backup](https://spatie.be/docs/laravel-backup/v9/introduction)
+- [spatie/laravel-backup](https://spatie.be/docs/laravel-backup/v9/introduction)
 
 ### Laravel Nova
 
