@@ -9,7 +9,7 @@
   "singleQuote": true,
   "singleAttributePerLine": false,
   "tabWidth": 2,
-  "tailwindFunctions": ["clsx", "cn"],
+  "tailwindFunctions": ["clsx", "cn", "cva"],
   "tailwindStylesheet": "resources/css/app.css",
   "trailingComma": "all",
   "plugins": ["prettier-plugin-tailwindcss"],
