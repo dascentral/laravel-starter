@@ -17,7 +17,7 @@ Instructions are accurate as of March 2026 for a [Laravel 12](https://laravel.co
 
 ### Resources
 
-- [Essentials](https://laravel-news.com/laravel-essentials) &mdash; This package, created by Nuno Maduro, provides better defaults for your Laravel applications.
+- [Essentials](https://laravel-news.com/laravel-essentials) A package created by Nuno Maduro that provides better defaults for your Laravel applications.
 - [The Next Step After Fresh Laravel Installation: Setting Up Your AppServiceProvider](https://medium.com/the-artisans-journal/the-next-step-after-fresh-laravel-installation-setting-up-your-appserviceprovider-a010cb69214e) &mdash; Great inventory of suggestions for additional modifications you can consider making to your `AppServiceProvider` immediately after creating a new Laravel application.
 
 ### The Future
