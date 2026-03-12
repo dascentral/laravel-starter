@@ -20,7 +20,7 @@ jobs:
       composer-auth: ${{ secrets.COMPOSER_AUTH }}
 
   deploy:
-    needs: [tests, audit]
+    needs: [audit, tests]
     uses: dascentral/reusable-workflows/.github/workflows/laravel-deploy.yml@e4a164e115d74ac0f585c9b4205163b2d4fc01c8 # v0.6.0
     with:
       php-version: '8.4'
