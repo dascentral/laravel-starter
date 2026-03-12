@@ -1,6 +1,6 @@
 echo "🔍 Running pre-push checks..."
 
-echo "🐘 Running Laravel Pint..."
+echo "🐘 Running Laravel Pint."
 ./vendor/bin/pint --test
 
 if [ $? -ne 0 ]; then
@@ -8,7 +8,7 @@ if [ $? -ne 0 ]; then
     exit 1
 fi
 
-echo "🔬 Running Larastan..."
+echo "🔬 Running Larastan."
 ./vendor/bin/phpstan analyse --ansi --memory-limit 512M
 
 if [ $? -ne 0 ]; then
