@@ -1,2 +1,4 @@
-echo "🎨 Running frontend checks on staged files..."
+echo "🔍 Running pre-commit checks..."
+echo "🎨 Running lint-staged."
 npx lint-staged
+echo "✅ All checks passed!"
